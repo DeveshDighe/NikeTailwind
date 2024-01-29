@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .input {
+    @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
+  }
+}
+
+@layer utilities {
+  .padding {
+    @apply sm:px-16 px-8 sm:py-24 py-12;
+  }
+
+  .padding-x {
+    @apply sm:px-16 px-8;
+  }
+
+  .padding-y {
+    @apply sm:py-24 py-12;
+  }
+
+  .padding-l {
+    @apply sm:pl-16 pl-8;
+  }
+
+  .padding-r {
+    @apply sm:pr-16 pr-8;
+  }
+
+  .padding-t {
+    @apply sm:pt-24 pt-12;
+  }
+
+  .padding-b {
+    @apply sm:pb-24 pb-12;
+  }
+
+  .info-text {
+    @apply font-montserrat text-slate-gray text-lg leading-7;
+  }
+
+  .aaaaa{
+    @apply block border border-gray-400 pb-3 pt-1 rounded-md w-40 bg-slate-100 absolute top-6 right-0;
+  }
+  .bbbbb{
+    @apply hidden border border-red-400 pb-3 pt-1 rounded-md w-40  bg-slate-100 absolute top-6 right-0 h-0 ;
+  }
+}
+
+.DropDown {
+  position: absolute;
+  width: 150px;
+  height: 270px;
+  background-color: white;
+  box-shadow: 1px 1px 20px -6px gray;
+  border: 1px solid rgb(204, 204, 204);
+  top: 35px;
+  right: 0px;
+  display: block;
+  transition: all 0.3s;
+  /* max-height: 140px; */
+  border-radius: 20px;
+  padding: 10px;
+  z-index: 3;
+  overflow: hidden;
+
+}
+
+.DropDownHide {
+  position: absolute;
+  width: 150px;
+  height: 0px;
+  background-color: white;
+
+  top: 35px;
+  right: 0px;
+  display: block;
+  transition: all 0.3s;
+  /* max-height: 140px; */
+  border-radius: 20px;
+  opacity: 0;
+  padding: 10px;
+  z-index: 3;
+  overflow: hidden;
+
+
+
+  /* Added below code to do not trigger div when it is hidden */
+  visibility: hidden;
+  /* or */
+  opacity: 0;
+  pointer-events: none;
+  /* This will make the element not respond to pointer events */
+
+}
+
